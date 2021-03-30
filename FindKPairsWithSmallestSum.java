@@ -30,6 +30,7 @@ class Solution {
     }
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+o(klogk) time
 class Solution {
     class Pair{
         int x;
@@ -49,7 +50,7 @@ class Solution {
         if(nums1.length==0 | nums2.length==0)
             return res;
         PriorityQueue<Pair> pq=new PriorityQueue<>((o1,o2)->o1.sum-o2.sum);
-        for(int i=0;i<nums1.length;i++)
+        for(int i=0;i<nums1.length && i<k;i++)
         {
             pq.add(new Pair(nums1[i],nums2[0],nums1[i]+nums2[0],0));
         }
